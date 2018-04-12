@@ -1,4 +1,7 @@
 /* --- how I should comment css in witch part --- */
+$color-hover: rgb(40, 201, 230);
+$grey-background: rgba(255, 255, 255, 0.5);
+
 body {
     margin: 0 auto;
 }
@@ -42,7 +45,7 @@ ul {
     letter-spacing: 3px;
          }
         }
-}
+    }
 
 header { 
     nav {
@@ -98,17 +101,12 @@ section {
         text-transform: uppercase;
         font-weight: bold;
         }
+    }
 }
 
-section > div h2 {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-* {
-	box-sizing: border-box;
-}
 
 /* ---- profits  and grid (where I should put grid? ---- */
+
 
 .cross, .trophy, .fire {
     text-align: center;
@@ -118,16 +116,19 @@ section > div h2 {
     transition: 2s;
 }
 
-.profits > div h5 {
-    text-transform: capitalize;
-    font-weight: normal;
-    color: rgb(148, 142, 142);
-    font-size: 13px;
-}
-
-.profits > div h4 {
-    text-transform: uppercase;
-    font-size: 20px;
+.profits {
+    div { 
+        h5 {
+        text-transform: capitalize;
+        font-weight: normal;
+        color: rgb(148, 142, 142);
+        font-size: 13px;
+        }
+        h4 {
+        text-transform: uppercase;
+        font-size: 20px;
+        }
+    }
 }
 
 /* ---- Gallery ----- */
@@ -174,10 +175,14 @@ section > div h2 {
     position: relative;
 }
 
-.gallery-margin > .layer .fa {
-    font-family: Font Awesome\ 5 Free;
-    display: inline-flex;
-    line-height: 180px;
+.gallery-margin { 
+    .layer {
+        .fa {
+        font-family: Font Awesome\ 5 Free;
+        display: inline-flex;
+        line-height: 180px;
+        }
+    }
 }
 
 /* ---- Team ---- */
@@ -197,10 +202,12 @@ section > div h2 {
     height: auto;
 }
 
-.member > img {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
+.member {
+        img {
+        width: 100px;
+        height: auto;
+        border-radius: 50%;
+        }
 }
 
 .layer2 {
@@ -209,8 +216,8 @@ section > div h2 {
     height: 100px;
     border-radius: 50%;
     top: 0;
-   text-align: center;
-   font-size: 20px;
+    text-align: center;
+    font-size: 20px;
     display: none;
     line-height: 100px;
 }
@@ -251,14 +258,18 @@ section > div h2 {
 
 }
 
-.row-nest > .col-4 {
+.row-nest { 
+    .col-4 {
     font-style: italic;
+    }
 }
 
-.sec-pic > img {
+.sec-pic { 
+    img {
     height: 300px;
     margin: 30px;
     margin-top: 70px;
+    }
 }
 
 /*------ numbers ------*/
@@ -318,7 +329,7 @@ section > div h2 {
 }
 
 .fab {
-    color: rgb(1, 198, 241);
+    color: $color-hover;
     width: 20px;
     transition-duration: 1s;
     text-align: center;
@@ -601,13 +612,16 @@ section > div h2 {
     .col-m-11 {width: 91.66%;}
     .col-m-12 {width: 100%;}
 
-    header > nav ul li a:hover {
-        color: rgb(40, 201, 230);
+    ul { 
+        li {  
+            a:hover {
+            color: $color-hover;
+            }
+        }
     }
 
-
     .cross:hover, .trophy:hover, .fire:hover {
-        color: rgb(40, 201, 230);
+        color: $color-hover;
     }
 
     .gallery-margin:hover .layer {
@@ -616,7 +630,7 @@ section > div h2 {
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: $grey-background;
     }
 
     .fab:hover {
@@ -624,12 +638,12 @@ section > div h2 {
     }
 
     .no-text:hover {
-        color: rgb(1, 198, 241);
+        color: $color-hover;
     }
 
     .member:hover > .layer2 {
         display: block;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: $grey-background;
     }
 
     .gallery-margin {
